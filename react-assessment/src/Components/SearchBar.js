@@ -21,8 +21,9 @@ class SearchBar extends Component {
 
     handleClick() {
         const { inputVal } = this.state;
+        const { data } = this.props;
 
-        this.props.data.filter((element) => {
+        data.filter((element) => {
             return element.title.includes(inputVal);
         })
     }
@@ -34,6 +35,7 @@ class SearchBar extends Component {
             <div>
                 <input onChange={(e) => this.handleChange(e.target.value)} />
                 <button onClick={this.handleClick}>Search</button>
+
             </div>
         )
     }
