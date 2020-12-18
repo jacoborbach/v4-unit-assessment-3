@@ -12,12 +12,13 @@ class BookList extends Component {
         //console.log(this.props.data)
         const { data } = this.props;
         return (
-            <div>
+            <div className='bookList'>
                 {data.map((element, i) => {
                     return (
-                        <img key={i} src={element.img} alt={element.title} />
-                        // `url('${images[0]}')`
-                        // <h4 key={i}>{element.title} by {element.author}</h4>
+                        <div key={i}>
+                            <img src={element.img} alt={element.title} />
+                            <p style={{ fontSize: 9 }}>{element.title} by {element.author}</p>
+                        </div>
                     )
                 })}
             </div>
