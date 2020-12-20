@@ -5,7 +5,8 @@ export class Shelf extends Component {
     render() {
         return (
             <div>
-
+                Shelf
+                {/* {this.props.shelf} */}
             </div>
         )
     }

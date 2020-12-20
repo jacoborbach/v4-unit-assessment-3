@@ -15,15 +15,24 @@ class App extends Component {
     }
   }
 
+  addToShelf = (selectedBook) => {
+    //accessing books title data.title
+    const copyShelf = [...this.state.shelf, selectedBook];
+    this.setState({
+      shelf: copyShelf
+    })
+  }
+
   render() {
-    const { data } = this.state;
+    const { data, shelf } = this.state;
+    console.log(shelf)
     return (
       <div className='App' >
         <Header />
         <SearchBar data={data} />
         <aside className='displayContent'>
-          <BookList data={data} />
-          <Shelf />
+          <BookList data={data} addToShelfFn={this.addToShelf} />
+          <Shelf shelf={shelf} />
         </aside>
       </div>
     );
