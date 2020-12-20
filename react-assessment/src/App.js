@@ -23,16 +23,24 @@ class App extends Component {
     })
   }
 
+  clearShelf = () => {
+    const emptyShelf = [];
+
+    this.setState({
+      shelf: emptyShelf
+    })
+  }
+
   render() {
     const { data, shelf } = this.state;
-    //console.log(shelf)
+    console.log(shelf)
     return (
       <div className='App' >
         <Header />
         <SearchBar data={data} />
         <aside className='displayContent'>
           <BookList data={data} addToShelfFn={this.addToShelf} />
-          <Shelf shelf={shelf} />
+          <Shelf shelf={shelf} clearShelfFn={this.clearShelf} />
         </aside>
       </div>
     );
