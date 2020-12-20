@@ -31,13 +31,25 @@ class App extends Component {
     })
   }
 
+  filterBooks = (input) => {
+    const { data } = this.state;
+
+    const filteredBooks = data.filter(element => {
+      return element.title.includes(input);
+    })
+
+    this.setState({
+      data: filteredBooks
+    })
+  }
+
   render() {
     const { data, shelf } = this.state;
     console.log(shelf)
     return (
       <div className='App' >
         <Header />
-        <SearchBar data={data} />
+        <SearchBar filterBooksFn={this.filterBooks} />
         <aside className='displayContent'>
           <BookList data={data} addToShelfFn={this.addToShelf} />
           <Shelf shelf={shelf} clearShelfFn={this.clearShelf} />
