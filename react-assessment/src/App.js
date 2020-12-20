@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     const { data, shelf } = this.state;
-    console.log(shelf)
+    //console.log(shelf)
     return (
       <div className='App' >
         <Header />

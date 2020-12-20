@@ -21,7 +21,7 @@ class BookList extends Component {
     render() {
         //console.log(this.props.data)
         //console.log(this.state.tempShelf)
-        console.log(this.props)
+        //console.log(this.props)
         const { data } = this.props;
         return (
             <div className='bookList'>
