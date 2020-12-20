@@ -43,13 +43,22 @@ class App extends Component {
     })
   }
 
+  reset = () => {
+    const { data } = this.state;
+    const copyData = data;
+
+    this.setState({
+      data: copyData
+    })
+  }
+
   render() {
     const { data, shelf } = this.state;
     console.log(shelf)
     return (
       <div className='App' >
         <Header />
-        <SearchBar filterBooksFn={this.filterBooks} />
+        <SearchBar filterBooksFn={this.filterBooks} resetFn={this.reset} />
         <aside className='displayContent'>
           <BookList data={data} addToShelfFn={this.addToShelf} />
           <Shelf shelf={shelf} clearShelfFn={this.clearShelf} />
