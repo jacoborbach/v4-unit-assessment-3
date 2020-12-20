@@ -37,9 +37,15 @@
   }
 }
 
-img {
-  height: 100px;
-  width: 80px;
+.header {
+  color: #008B8B;
+  background-color: white;
+  margin: 30px;
+}
+
+.displayContent {
+  display: flex;
+  flex-direction: row;
 }
 
 .bookList {
@@ -47,3 +53,9 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+img {
+  height: 100px;
+  width: 80px;
+}
+
