@@ -38,9 +38,9 @@ class SearchBar extends Component {
 
     render() {
         //console.log(this.state.inputVal)
-        console.log(this.props)
+        //console.log(this.props)
         return (
-            <div>
+            <div className='search'>
                 <input value={this.state.inputVal} onChange={(e) => this.handleChange(e.target.value)} />
                 <button onClick={this.handleClick}>Search</button>
                 <button onClick={this.handleClear}>Clear Search</button>

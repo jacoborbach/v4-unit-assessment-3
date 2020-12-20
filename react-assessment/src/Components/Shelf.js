@@ -5,7 +5,7 @@ export class Shelf extends Component {
     render() {
         return (
             <div>
-                <h1>This is your shelf:</h1>
+                <h1 className='shelf'>This is your shelf:</h1>
                 <button onClick={this.props.clearShelfFn}>Clear Shelf</button>
                 {/* {this.props.shelf} */}
                 {this.props.shelf.map((element, i) => {

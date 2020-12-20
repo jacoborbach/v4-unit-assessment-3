@@ -33,7 +33,6 @@ class App extends Component {
 
   filterBooks = (input) => {
     const { data } = this.state;
-
     const filteredBooks = data.filter(element => {
       return element.title.includes(input);
     })
@@ -44,17 +43,17 @@ class App extends Component {
   }
 
   reset = () => {
-    const { data } = this.state;
-    const copyData = data;
+    // const { data } = this.state;
+    // const copyData = [...data];
 
     this.setState({
-      data: copyData
+      data: data
     })
   }
 
   render() {
     const { data, shelf } = this.state;
-    console.log(shelf)
+    //console.log(data)
     return (
       <div className='App' >
         <Header />
